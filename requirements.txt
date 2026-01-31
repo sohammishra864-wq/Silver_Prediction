@@ -7,3 +7,6 @@ python-dotenv
 transformers
 torch
 tqdm
+# requirement for LSTM
+yfinance
+scikit-learn
