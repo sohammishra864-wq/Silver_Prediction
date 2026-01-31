@@ -3,6 +3,7 @@ import pandas as pd
 from datetime import datetime
 from pathlib import Path
 STORAGE_PATH = Path(__file__).resolve().parents[1] / "storage" / "raw_news.csv"
+STORAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
 # I am writing these comments for Future as I will not remember everything
 RSS_FEEDS = [  # from AI
     "https://www.livemint.com/rss/markets",
