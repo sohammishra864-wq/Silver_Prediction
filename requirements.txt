@@ -1,0 +1,5 @@
+# requirements for source
+feedparser
+pandas
+praw
+python-dotenv
