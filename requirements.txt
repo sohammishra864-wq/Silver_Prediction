@@ -3,3 +3,7 @@ feedparser
 pandas
 praw
 python-dotenv
+# requirements for finbert
+transformers
+torch
+tqdm
