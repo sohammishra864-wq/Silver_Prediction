@@ -3,7 +3,6 @@ import pandas as pd
 from datetime import datetime
 from pathlib import Path
 STORAGE_PATH = Path(__file__).resolve().parents[1] / "storage" / "raw_news.csv"
-STORAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
 # I am writing these comments for Future as I will not remember everything
 RSS_FEEDS = [  # from AI
     "https://www.livemint.com/rss/markets",
@@ -18,7 +17,7 @@ KEYWORDS = [   # from AI
 # is relevant is only meant for shortlisting the relevant topics from many topics
 def is_relevant(text: str) -> bool:  # Checks for match from KEYWORDS if match exist
     text = text.lower()
-    return any(txt in text for txt in KEYWORDS) # then returns
+    return any(txt in text for txt in KEYWORDS)
 def fetch_livemint():
     rows = []
     for url in RSS_FEEDS:
