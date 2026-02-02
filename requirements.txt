@@ -1,6 +1,7 @@
 # requirements for source
 feedparser
 pandas
+numpy
 praw
 python-dotenv
 # requirements for finbert
