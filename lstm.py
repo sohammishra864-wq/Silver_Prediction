@@ -41,6 +41,7 @@ def senti_plus_OHLCV():
     sentiment_df["date"] = pd.to_datetime(sentiment_df["date"]).dt.date
     df = price_df.merge(sentiment_df, on="date", how="left")
     df["sentiment"] = df["sentiment"].fillna(0)
+    df["sentiment"] = df["sentiment"] * 50
     df.to_csv(DATASET_PATH, index=False)
     return df
 
